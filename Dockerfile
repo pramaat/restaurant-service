@@ -1,4 +1,4 @@
-FROM adoptopenjdk/openjdk11:jdk-11.0.2.9-slim
+FROM eclipse-temurin:21-jre
 WORKDIR /opt
 COPY target/*.jar /opt/app.jar
-ENTRYPOINT exec java $JAVA_OPTS -jar app.jar
+ENTRYPOINT ["java","-jar","/opt/app.jar"]
